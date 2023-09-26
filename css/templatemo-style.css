@@ -112,13 +112,20 @@ p {
 
 #home .container,
 #about .container, 
-#experience .container,
 #service .container,
 #education .container,
 #contact .container {
   width: 100%;
   padding: 0;
   margin: 0;
+  border: 2px solid #000000;
+}
+
+#experience .container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 2px solid #000000;
 }
 
 #service,
@@ -358,6 +365,7 @@ a:hover, a:active, a:focus {
 -----------------------------------------*/
 #about{
   padding: 32px 32px 32px 32px;
+  border: 2px solid #000000;
 }
 
 #about .about-img {
@@ -405,6 +413,7 @@ a:hover, a:active, a:focus {
 
 #service {
   background: #f1e2d7;
+  border: 2px solid #000000;
   padding: 32px 32px 32px 32px;
 }
 
@@ -432,12 +441,12 @@ a:hover, a:active, a:focus {
 -----------------------------------------*/
 #experience {
   background: #f1e2d7;
+  border: 2px solid #000000;
 }
-#experience .col-sm-6 {
-  padding: 32px 32px 32px 32px;
-}
+
 #experience .experience-thumb-l1{
-  padding-right: 32px;
+  border: 2px solid #000000;
+  padding: 32px 32px 32px 32px;
 }
 
 #experience .experience-thumb-l1 .experience-img {
@@ -480,6 +489,7 @@ a:hover, a:active, a:focus {
   padding-right: 16px;
   padding-left: 32px;
   padding-bottom: 32px;
+  border: 2px solid #000000;
 }
 
 #education .education-thumb{
