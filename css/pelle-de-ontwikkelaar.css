@@ -131,8 +131,16 @@ footer {
     position: absolute;
 }
 
+.color-white {
+    color: #f1e2d7;
+}
+
 .color-accent {
     color: #306333;
+}
+
+.color-accent-light{
+    color : #7E9A86;
 }
 
 /*---------------------------------------
@@ -337,24 +345,26 @@ a:hover, a:active, a:focus {
 
 #about .skill-thumb {
     padding: 32px 32px 32px 32px;
-    background: #306333;
+    background: #9a7e92;
     border-radius: 25px;
     border: 2px solid #f1e2d7;
 }
 
 #about .progress {
-    background: #f1e2d7;
+    /*background: #F8B500;*/
+    background: #7E9A86;
     border-radius: 0px;
     box-shadow: none;
     height: 2px;
 }
 
 #about .progress-bar-primary {
-    background: #232B2B;
+    background: #f1e2d7;
 }
 
 #about strong,
 #about span {
+    color: #f1e2d7;
     font-weight: bold;
     display: inline-block;
     padding-bottom: 8px;
@@ -376,7 +386,7 @@ a:hover, a:active, a:focus {
 #service .service-thumb {
     padding: 52px 52px 52px 52px;
     border-radius: 25px;
-    border: 2px solid #E9724C;
+    border: 2px solid #7E9A86;
     background: #f1e2d7;
 }
 
@@ -403,9 +413,9 @@ a:hover, a:active, a:focus {
 }
 
 #experience .experience-thumb-l2{
-    background: #E9724C;
+    background: #7E9A86;
     border-radius: 25px;
-    border: 2px solid #E9724C;
+    border: 2px solid #7E9A86;
     padding: 32px 32px 32px 32px;
 }
 
@@ -432,9 +442,9 @@ a:hover, a:active, a:focus {
 }
 
 #education .education-thumb{
-    background: #306333;
+    background: #9a7e92;
     border-radius: 25px;
-    border: 2px solid #306333;
+    border: 2px solid #9a7e92;
     padding: 32px 32px 32px 32px;
 }
 
@@ -471,9 +481,9 @@ a:hover, a:active, a:focus {
 
 #contact .contact-form,
 #contact .contact-thumb {
-    background: #E9724C;
+    background: #7E9A86;
     border-radius: 25px;
-    border: 2px solid #E9724C;
+    border: 2px solid #7E9A86;
     padding: 22px 32px 22px 32px;
     margin: auto;
     width: 50%;
@@ -513,8 +523,8 @@ a:hover, a:active, a:focus {
 }
 
 #contact input[type="submit"]:hover {
-    background: #306333;
-    border-color: #306333;
+    background: transparent;
+    border: 2px solid #f1e2d7;
     color: #f1e2d7;
 }
 
