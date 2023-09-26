@@ -1,0 +1,5 @@
+#306333 green
+#f9f9f9 background
+
+De installatietool openen
+https://admin.google.com/u/0/ac/signup/setup/v2/gettingstarted
