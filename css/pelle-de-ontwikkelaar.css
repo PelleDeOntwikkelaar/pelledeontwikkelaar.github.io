@@ -303,7 +303,7 @@ a:hover, a:active, a:focus {
 }
 
 #home .home-img {
-    background: url('../images/home-img.jpg') no-repeat;
+    background: url('../images/placeholder.jpeg') no-repeat;
     background-size: cover;
     border-radius: 25px;
     border: 0px solid #f1e2d7;
@@ -334,7 +334,7 @@ a:hover, a:active, a:focus {
 
 #about .about-img {
     padding: 32px 32px 32px 32px;
-    background: url('../images/about-img.jpg') no-repeat;
+    background: url('../images/placeholder.jpeg') no-repeat;
     border-radius: 25px;
     border: 2px solid #f1e2d7;
 }
@@ -351,8 +351,7 @@ a:hover, a:active, a:focus {
 }
 
 #about .progress {
-    /*background: #F8B500;*/
-    background: #7E9A86;
+    background: #7c6676;
     border-radius: 0px;
     box-shadow: none;
     height: 2px;
@@ -388,6 +387,7 @@ a:hover, a:active, a:focus {
     border-radius: 25px;
     border: 2px solid #7E9A86;
     background: #f1e2d7;
+    flex:1;
 }
 
 #service .service-thumb .fa {
