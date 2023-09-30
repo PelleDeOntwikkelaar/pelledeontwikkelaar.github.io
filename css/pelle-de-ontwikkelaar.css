@@ -387,7 +387,6 @@ a:hover, a:active, a:focus {
     border-radius: 25px;
     border: 2px solid #7E9A86;
     background: #f1e2d7;
-    flex:1;
 }
 
 #service .service-thumb .fa {
@@ -622,7 +621,7 @@ footer {
   #experience .col-md-6,
   #education .col-md-6,
   #contact .col-md-3 {
-        padding: 32;
+        padding: 32px;
     }
 
   .background-image {
