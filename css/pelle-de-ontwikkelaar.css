@@ -39,6 +39,7 @@ h3 {
     font-size: 26px;
     line-height: 32px;
     padding-bottom: 6px;
+    font-weight: bold;
 }
 
 h4 {
@@ -60,11 +61,15 @@ strong {
 }
 
 p {
-    color: #888;
+    color: #5e5e5e;
     font-size: 16px;
     font-weight: 300;
     line-height: 28px;
     letter-spacing: 0.2px;
+}
+
+ul {
+    list-style: none;
 }
 
 .section-btn {
@@ -82,7 +87,7 @@ p {
 }
 
 .section-btn:hover {
-    background: #306333;
+    background: #7E9A86;
     border-color: transparent;
     color: #f1e2d7;
 }
@@ -251,7 +256,7 @@ a:hover, a:active, a:focus {
 
 .custom-navbar .nav li a:hover {
     background: transparent;
-    color: #306333;
+    color: #7E9A86;
 }
 
 .custom-navbar .navbar-nav > li > a:hover,
@@ -571,7 +576,7 @@ footer {
 }
 
 .social-icon li a:hover {
-    background: #306333;
+    background: #7E9A86;
     border-color: #f1e2d7;
     color: #f1e2d7;
     transform: scale(1.1);
