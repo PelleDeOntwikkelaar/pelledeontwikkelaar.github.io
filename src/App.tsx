@@ -5,6 +5,8 @@ import { AboutSection } from "../components/AboutSection";
 import { WhyUbiquitiSection } from "../components/WhyUbiquitiSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
+import '../styles/globals.css'
+
 
 export default function App() {
   return (
