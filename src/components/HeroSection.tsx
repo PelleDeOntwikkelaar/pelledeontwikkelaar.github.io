@@ -11,7 +11,7 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl lg:text-5xl text-primary mb-6 leading-tight">
-              Network Oplossingen voor kleine (handels)zaken
+              Netwerk Oplossingen voor kleine (handels)zaken
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Gespecialiseerd in installatie en onderhoud van Ubiquiti UniFi-systemen die ook betaalbaar zijn voor kleine bedrijven. Betrouwbaar, schaalbaar en vakkundig geïnstalleerd.
