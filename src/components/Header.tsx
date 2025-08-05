@@ -19,7 +19,9 @@ export function Header() {
           </nav>
           
           <div className="hidden md:block">
-            <Button>Vraag een offerte!</Button>
+            <Button asChild>
+              <a href="#contact">Vraag een offerte!</a>
+            </Button>
           </div>
 
           <Button variant="ghost" size="icon" className="md:hidden">

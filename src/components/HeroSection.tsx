@@ -18,8 +18,8 @@ export function HeroSection() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button size="lg" className="text-lg px-8">
-                Gratis consultatie
+              <Button size="lg" className="text-lg px-8" asChild>
+                <a href="#contact">Gratis consultatie</a>
               </Button>
             </div>
             
