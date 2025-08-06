@@ -13,24 +13,19 @@ export function AboutSection() {
               Netwerk Installateur
             </Badge>
             <h2 className="text-3xl lg:text-4xl text-primary mb-6">
-              Lokale Expertise, Enterprise-Grade Resultaten
+              Betrouwbare netwerken, op maat gemaakt.
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Hoi mijn naam is Pelle en ik ben in het dagelijks leven software ingenieur.
-              Daarnaast biedt ik mijn kennis en arbeid aan als zelfstandige in bijberoep.
-              Waarom ben ik hiermee begonnen? Het aantal keer dat ik zelf in een koffie bar zat en via het netwerk aan een POS systeem of aan alle andere gebruikers geraakte, is al niet meer op een hand te tellen.
+              Hallo, ik ben Pelle en ik werk als software-ingenieur.
+              Naast mijn vaste job zet ik mijn kennis en expertise in als zelfstandige in bijberoep.
+              Ik help ondernemingen met het opzetten van veilige en snelle netwerken.
             </p>
             <p className="text-lg text-muted-foreground mb-8">
-              Het vooroordeel: goede netwerken komen met een met een gigantisch prijskaartje.
-              Maar dit hoeft het absoluut niet te zijn.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8">
-              Als zelfstandige in bij beroep heb ik mij gespecialiseerd in de fantastische systemen van Ubiquiti: Unifi.
-              Deze gefocuste expertise betekent een goede product kennis en betrouwbare lange termijn ondersteuning.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8">
-              Ik bouw graag een langetermijn relatie op met de eigenaars van kleine ondernemingen en retail managers.
-              Zodat ik een vaste partner kan zijn en het netwerk mee kan groeien met de onderneming.
+              Ik specialiseer me in Ubiquiti: Unifi-systemen,
+              omdat ik ervan overtuigd ben dat je voor een eerlijke prijs een fantastisch netwerk kunt bouwen.
+              Dit garandeert een sterke productkennis en langdurige ondersteuning.
+              Ik werk graag aan een duurzame relatie met eigenaars van kleine ondernemingen en retail managers,
+              zodat ik kan meegroeien als jouw vaste partner.
             </p>
           </div>
           

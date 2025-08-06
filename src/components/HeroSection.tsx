@@ -11,30 +11,30 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl lg:text-5xl text-primary mb-6 leading-tight">
-              Netwerk Oplossingen voor kleine (handels)zaken
+              Jouw bedrijfsnetwerk, klaar voor de toekomst
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Gespecialiseerd in installatie en onderhoud van Ubiquiti UniFi-systemen die ook betaalbaar zijn voor kleine bedrijven. Betrouwbaar, schaalbaar en vakkundig geïnstalleerd.
+              Geen gedoe meer met traag internet of onveilige verbindingen. Met Ubiquiti UniFi-systemen zorg ik voor een netwerk dat niet alleen betaalbaar is, maar ook ijzersterk, schaalbaar en met oog voor detail geïnstalleerd.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button size="lg" className="text-lg px-8" asChild>
-                <a href="#contact">Gratis consultatie</a>
+                <a href="#contact">Vraag een gratis adviesgesprek aan</a>
               </Button>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-6 text-sm">
               <div className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-green-600" />
-                <span>Tot 5 Jaar Garantie beschikbaar</span>
+                <span>Uitgebreide garantie (tot 5 jaar)</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="h-5 w-5 text-green-600" />
-                <span>Remote Probleemoplossing bestaande installaties </span>
+                <span>Hulp op afstand wanneer je die nodig hebt</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-green-600" />
-                <span>Ubiquiti Installer</span>
+                <span>Ubiquiti installateur</span>
               </div>
             </div>
           </div>
