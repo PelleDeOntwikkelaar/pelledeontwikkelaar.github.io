@@ -4,43 +4,43 @@ import {Wifi, Shield, Building2, Store, Zap, HeadphonesIcon, CoffeeIcon, Cctv} f
 const services = [
   {
     icon: Store,
-    title: "Retail POS Netwerk",
-    description: "Betrouwbare netwerken voor retail omgevingen met gescheiden guest WiFi, POS systems, inventory management connectivity en cameras."
+    title: "Netwerken voor Retail",
+    description: "Creëer een betrouwbaar en gescheiden netwerk voor je retailomgeving. Met aparte wifi voor klanten en veilige verbindingen voor je POS-systemen, voorraadbeheer en camera's, zorg je voor een professionele en veilige werkomgeving."
   },
   {
     icon: CoffeeIcon,
-    title: "Latte Art",
-    description: "Van de casual swiper tot de koffiebar werker: biedt met gerust hart een veilig netwerk aan je klanten."
+    title: "Veilig WiFi voor Horeca",
+    description: "Van de barista tot de klant: bied iedereen een veilig en stabiel wifi-netwerk. Met een gerust hart laat je gasten genieten van je koffie en de wifi, terwijl je eigen systemen perfect afgeschermd blijven."
   },
   {
     icon: Building2,
-    title: "Kantoor Netwerk Setup",
-    description: "Draadloze Netwerk infrastructuur voor kleine kantoren met Unifi access points, gateways en switches. "
+    title: "Netwerken voor Kleine Kantoren",
+    description: "Zet de basis voor een productieve werkomgeving. Met een draadloze netwerkinfrastructuur van Unifi, inclusief access points, gateways en switches, zorgen we voor naadloze en betrouwbare connectiviteit."
   },
   {
     icon: Wifi,
     title: "WiFi 6/7 Upgrades",
-    description: "Maak gebruik van de hogere snelheid en betere spreiding die met de moderne WiFi standaarden komen. "
+    description: "Klaar voor de toekomst? Upgrade naar de nieuwste wifi-standaarden en profiteer van hogere snelheden en een betere dekking. De perfecte manier om je netwerk naar een hoger niveau te tillen."
   },
   {
     icon: Shield,
-    title: "Netwerk Beveiliging",
-    description: "Stel met een gerust gemoed wifi ter beschikking aan klanten en personeel."
+    title: "Netwerkbeveiliging",
+    description: "Veiligheid staat voorop. Wij zorgen voor de juiste instellingen zodat je met een gerust hart wifi kunt aanbieden aan zowel klanten als personeel, zonder dat je je zorgen hoeft te maken over cyberdreigingen."
   },
   {
     icon: Cctv,
-    title: "Beveiliging",
-    description: "Enterprise-grade beveiliging met UniFi Protect cameras, toegangs controle, en beveiligings systeem."
+    title: "Camerabewaking & Toegangscontrole",
+    description: "Bescherm je onderneming met enterprise-grade oplossingen. Onze diensten omvatten de installatie van Unifi Protect camera's, toegangscontrole en andere beveiligingssystemen voor een complete beveiliging van jouw pand."
   },
   {
     icon: Zap,
-    title: "Network Optimalisatie",
-    description: "Performance tuning, bandbreedte management en QoS configuratie om de optimale netwerk kwaliteit te kunnen garanderen."
+    title: "Netwerk Optimalisatie",
+    description: "Haal het maximale uit je netwerk. Wij optimaliseren de prestaties door middel van performance tuning, bandbreedtebeheer en QoS-configuraties, zodat je altijd de beste netwerkkwaliteit kunt garanderen."
   },
   {
     icon: HeadphonesIcon,
-    title: "Ongoing Support",
-    description: "Remote monitoring, onderhoud, en 24/7 support."
+    title: "Service & Onderhoud",
+    description: "Je netwerk groeit met je mee. Met onze doorlopende ondersteuning ben je altijd verzekerd van remote monitoring, onderhoud en snelle service. Wij zijn jouw vaste partner, zodat jij je kunt focussen op je zaak."
   }
 ];
 
@@ -50,7 +50,7 @@ export function ServicesSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl text-primary mb-6">
-            Volledige Ubiquiti Netwerk Installaties
+            Volledige Netwerk Installaties
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Van kleine kantoren tot handelszaken: Ontwerp en installatie Ubiquiti UniFi-netwerken die kunnen meegroeien met uw bedrijf.

@@ -29,11 +29,12 @@ export function ContactSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl text-primary mb-6">
-            Vraag je Gratis Consultatie
+            Klaar voor de volgende stap?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Klaar om uw bedrijfsnetwerk te upgraden? Neem vandaag nog contact op voor een gratis consult en een vrijblijvende offerte.
-            Krijg een beoordeling van uw huidige situatie en advies voor de beste Ubiquiti-oplossing.
+            Wil je je bedrijfsnetwerk naar een hoger niveau tillen?
+            Vul dan hieronder je gegevens in voor een gratis consult en een vrijblijvende offerte.
+            Ik analyseer jouw situatie en geef je persoonlijk advies over de beste Ubiquiti-oplossing.
           </p>
         </div>
         
@@ -74,14 +75,14 @@ export function ContactSection() {
                     <Textarea 
                       id="project"
                       name="message"
-                      placeholder="Korte beschrijving van de verwachtingen en of huidige situatie."
+                      placeholder="Vertel me meer over je project of huidige situatie."
                       rows={4}
                     />
                     <ValidationError prefix="Message" field="message" errors={state.errors} className="text-sm text-destructive" />
                   </div>
                   
                   <Button type="submit" size="lg" className="w-full" disabled={state.submitting}>
-                    {state.submitting ? "Verzenden..." : "Verzenden"}
+                    {state.submitting ? "Verzenden..." : "Vraag consultatie aan"}
                   </Button>
                 </form>
               </CardContent>
@@ -91,7 +92,7 @@ export function ContactSection() {
           <div className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle>Contact Info</CardTitle>
+                <CardTitle>Contactgegevens</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
