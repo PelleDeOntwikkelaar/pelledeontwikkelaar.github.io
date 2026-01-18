@@ -80,7 +80,7 @@ export function Footer() {
 
         <div className="border-primary-foreground/20 mt-12 border-t pt-8 text-center">
           <p className="text-primary-foreground/60">
-            © 2025 Pelle De Ontwikkelaar | BE0803.076.163
+            © 2026 Pelle De Ontwikkelaar | BE0803.076.163
           </p>
         </div>
       </div>
