@@ -35,6 +35,7 @@ export function AboutSection() {
               src={imageSource}
               alt="Network technician working"
               className="w-full rounded-lg shadow-xl"
+              loading="lazy"
             />
           </div>
         </div>

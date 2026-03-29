@@ -1,13 +1,22 @@
+import { useState } from 'react'
 import { useForm, ValidationError } from '@formspree/react'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import { Phone, Mail, MapPin } from 'lucide-react'
+import { CONTACT } from '@/lib/contact'
 
 export function ContactSection() {
-  // IMPORTANT: Replace 'YOUR_FORM_ID' with your actual Formspree form ID
-  const [state, handleSubmit] = useForm('xpwlyyap')
+  const [state, handleSubmit] = useForm(
+    import.meta.env.VITE_FORMSPREE_ID as string
+  )
+  const [submitAttempted, setSubmitAttempted] = useState(false)
+
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    setSubmitAttempted(true)
+    handleSubmit(e)
+  }
 
   if (state.succeeded) {
     return (
@@ -52,7 +61,17 @@ export function ContactSection() {
                 <CardTitle>Laat van je horen</CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={onSubmit} className="space-y-6">
+                  {submitAttempted && !state.submitting && !state.succeeded && (
+                    <div
+                      role="alert"
+                      className="bg-destructive/10 text-destructive rounded-md px-4 py-3 text-sm"
+                    >
+                      Er is een fout opgetreden bij het verzenden. Controleer de
+                      velden hieronder en probeer opnieuw.
+                    </div>
+                  )}
+
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                     <div className="space-y-2">
                       <label htmlFor="name">Naam *</label>
@@ -102,7 +121,7 @@ export function ContactSection() {
                         id="phone"
                         type="tel"
                         name="phone"
-                        placeholder="+32 498 65 55 65"
+                        placeholder={CONTACT.phone}
                       />
                     </div>
                   </div>
@@ -111,13 +130,13 @@ export function ContactSection() {
                     <label htmlFor="project">Project Details</label>
                     <Textarea
                       id="project"
-                      name="message"
+                      name="project"
                       placeholder="Vertel me meer over je project of huidige situatie."
                       rows={4}
                     />
                     <ValidationError
-                      prefix="Message"
-                      field="message"
+                      prefix="Project"
+                      field="project"
                       errors={state.errors}
                       className="text-destructive text-sm"
                     />
@@ -147,7 +166,7 @@ export function ContactSection() {
                 <div className="flex items-center gap-3">
                   <Phone className="text-primary h-5 w-5" />
                   <div>
-                    <div>+32 498 65 55 65</div>
+                    <div>{CONTACT.phone}</div>
                     <div className="text-muted-foreground text-sm">
                       Whatsapp
                     </div>
@@ -157,7 +176,7 @@ export function ContactSection() {
                 <div className="flex items-center gap-3">
                   <Mail className="text-primary h-5 w-5" />
                   <div>
-                    <div>info@pelledeontwikkelaar.be</div>
+                    <div>{CONTACT.email}</div>
                     <div className="text-muted-foreground text-sm">Email</div>
                   </div>
                 </div>
@@ -165,9 +184,9 @@ export function ContactSection() {
                 <div className="flex items-center gap-3">
                   <MapPin className="text-primary h-5 w-5" />
                   <div>
-                    <div>Antwerpen</div>
+                    <div>{CONTACT.location}</div>
                     <div className="text-muted-foreground text-sm">
-                      80 km radius
+                      {CONTACT.radius}
                     </div>
                   </div>
                 </div>
