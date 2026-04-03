@@ -1,4 +1,5 @@
 import { Wifi, Phone, Mail, MapPin } from 'lucide-react'
+import { CONTACT } from '@/lib/contact'
 
 export function Footer() {
   return (
@@ -18,15 +19,15 @@ export function Footer() {
             <div className="space-y-2">
               <div className="text-primary-foreground/80 flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span>+32 498 65 55 65</span>
+                <span>{CONTACT.phone}</span>
               </div>
               <div className="text-primary-foreground/80 flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>info@pelledeontwikkelaar.be</span>
+                <span>{CONTACT.email}</span>
               </div>
               <div className="text-primary-foreground/80 flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                <span>Antwerpen en ruime omgeving</span>
+                <span>{CONTACT.locationFull}</span>
               </div>
             </div>
           </div>
@@ -80,7 +81,7 @@ export function Footer() {
 
         <div className="border-primary-foreground/20 mt-12 border-t pt-8 text-center">
           <p className="text-primary-foreground/60">
-            © 2026 Pelle De Ontwikkelaar | BE0803.076.163
+            © {new Date().getFullYear()} Pelle De Ontwikkelaar | BE0803.076.163
           </p>
         </div>
       </div>
