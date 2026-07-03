@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { Eyebrow } from '@/components/Eyebrow'
+import { PageMeta } from '@/components/PageMeta'
 import { useLang, type Service } from '@/lib/i18n'
+import { buildBreadcrumbSchema, SITE_URL } from '@/lib/structuredData'
 
 function ServiceBlock({ service }: { service: Service }) {
   const { t } = useLang()
@@ -57,6 +59,15 @@ export function ServicesPage() {
 
   return (
     <>
+      <PageMeta
+        title="Services: Advisory, Software & Networks"
+        description="Three connected practices for early-stage teams: IT advisory, software consulting and development, and UniFi / Ubiquiti network installation in Antwerp."
+        canonical={`${SITE_URL}/services`}
+        jsonLd={buildBreadcrumbSchema([
+          { name: 'Home', path: '/' },
+          { name: 'Services', path: '/services' },
+        ])}
+      />
       <section className="mx-auto max-w-[1200px] px-[22px] pt-[80px] pb-10 min-[720px]:px-[40px] min-[720px]:pt-[120px]">
         <Eyebrow>{t.servicesPage.eyebrow}</Eyebrow>
         <h1 className="font-display text-ink mt-4 max-w-[860px] text-[40px] leading-[1.1] font-light tracking-[-0.02em] min-[720px]:text-[60px]">

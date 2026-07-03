@@ -110,6 +110,25 @@ export function ContactSection() {
                 </Field>
               </div>
 
+              <div className="mt-5">
+                <Field id="interest" label={`${c.fInterest} *`}>
+                  <select
+                    id="interest"
+                    name="interest"
+                    required
+                    defaultValue=""
+                    className={cn(inputClass, 'w-full appearance-none bg-none')}
+                  >
+                    <option value="" disabled>
+                      {c.phInterest}
+                    </option>
+                    <option value="networks">{t.nav.networks}</option>
+                    <option value="advisory">{t.nav.advisory}</option>
+                    <option value="software">{t.nav.software}</option>
+                  </select>
+                </Field>
+              </div>
+
               <div className="mt-5 grid grid-cols-1 gap-5 min-[720px]:grid-cols-2">
                 <Field id="email" label={`${c.fEmail} *`}>
                   <Input

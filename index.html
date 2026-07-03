@@ -30,114 +30,13 @@
       })(window.location)
     </script>
 
-    <!-- SEO: EN-first positioning, local UniFi/Antwerp keywords retained -->
-    <title>
-      Pelle De Ontwikkelaar — Advisory · Software · UniFi Networks in Antwerp
-    </title>
-    <meta
-      name="description"
-      content="Calm, considered IT for founders: startup advisory, software consulting, and authorised UniFi / Ubiquiti network installation in Antwerp (80 km radius)."
-    />
-    <meta
-      name="keywords"
-      content="startup advisory, fractional CTO, software consulting, UniFi installer, Ubiquiti specialist, netwerkinstallatie Antwerpen, Unifi installateur, wifi KMO, Pelle De Ontwikkelaar"
-    />
-    <link rel="canonical" href="https://info.pelledeontwikkelaar.be/" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://info.pelledeontwikkelaar.be/" />
-    <meta
-      property="og:title"
-      content="Pelle De Ontwikkelaar — Advisory · Software · UniFi Networks"
-    />
-    <meta
-      property="og:description"
-      content="Calm, considered IT for founders: startup advisory, software consulting, and authorised UniFi / Ubiquiti network installation in Antwerp."
-    />
-    <meta
-      property="og:image"
-      content="https://info.pelledeontwikkelaar.be/og-image.jpeg"
-    />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta
-      property="twitter:url"
-      content="https://info.pelledeontwikkelaar.be/"
-    />
-    <meta
-      property="twitter:title"
-      content="Pelle De Ontwikkelaar — Advisory · Software · UniFi Networks"
-    />
-    <meta
-      property="twitter:description"
-      content="Calm, considered IT for founders: startup advisory, software consulting, and authorised UniFi / Ubiquiti network installation in Antwerp."
-    />
-    <meta
-      property="twitter:image"
-      content="https://info.pelledeontwikkelaar.be/og-image.jpeg"
-    />
-
-    <!-- Structured Data (JSON-LD) for Local Business -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Pelle De Ontwikkelaar",
-        "image": "https://info.pelledeontwikkelaar.be/og-image.jpeg",
-        "url": "https://info.pelledeontwikkelaar.be/",
-        "telephone": "+32498655565",
-        "email": "info@pelledeontwikkelaar.be",
-        "vatID": "BE 0803.076.163",
-        "founder": { "@type": "Person", "name": "Pelle Reyniers" },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Antwerpen",
-          "addressCountry": "BE"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 51.2194,
-          "longitude": 4.4025
-        },
-        "areaServed": {
-          "@type": "GeoCircle",
-          "geoMidpoint": {
-            "@type": "GeoCoordinates",
-            "latitude": 51.2194,
-            "longitude": 4.4025
-          },
-          "geoRadius": "80000"
-        },
-        "knowsLanguage": ["en", "nl"],
-        "description": "Startup advisory, software consulting, and authorised Ubiquiti UniFi network installation for founders and small teams in Antwerp and surroundings.",
-        "makesOffer": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "IT advisory & architecture"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Software development"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "UniFi / Ubiquiti network installation"
-            }
-          }
-        ],
-        "priceRange": "$$"
-      }
-    </script>
+    <!--
+      Route-specific title, meta description, canonical, OG/Twitter tags, and
+      JSON-LD are rendered per-page by <PageMeta> (src/components/PageMeta.tsx)
+      via React 19's head-hoisting, then frozen into static HTML per route by
+      scripts/prerender.mjs. Do not add route-specific tags here — they would
+      duplicate what React hoists (React 19 hoists but does not dedupe).
+    -->
   </head>
 
   <body>
