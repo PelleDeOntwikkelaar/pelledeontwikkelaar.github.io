@@ -55,11 +55,13 @@ export interface Copy {
     fCompany: string
     fEmail: string
     fPhone: string
+    fInterest: string
     fProject: string
     phName: string
     phCompany: string
     phEmail: string
     phPhone: string
+    phInterest: string
     phProject: string
     submit: string
     submitting: string
@@ -192,11 +194,13 @@ export const CONTENT: Record<Lang, Copy> = {
       fCompany: 'Company',
       fEmail: 'Email',
       fPhone: 'Phone',
+      fInterest: 'What are you looking for?',
       fProject: 'What are you working on?',
       phName: 'Your name',
       phCompany: 'Company name',
       phEmail: 'you@email.com',
       phPhone: '+32 …',
+      phInterest: 'Choose one',
       phProject: 'Tell me a bit about your project or current situation.',
       submit: 'Request a consultation',
       submitting: 'Sending…',
@@ -324,11 +328,13 @@ export const CONTENT: Record<Lang, Copy> = {
       fCompany: 'Bedrijfsnaam',
       fEmail: 'E-mail',
       fPhone: 'Telefoon',
+      fInterest: 'Waar ben je naar op zoek?',
       fProject: 'Waar werk je aan?',
       phName: 'Je naam',
       phCompany: 'Bedrijfsnaam',
       phEmail: 'jij@email.be',
       phPhone: '+32 …',
+      phInterest: 'Kies er één',
       phProject: 'Vertel me wat meer over je project of huidige situatie.',
       submit: 'Vraag een gesprek aan',
       submitting: 'Versturen…',
