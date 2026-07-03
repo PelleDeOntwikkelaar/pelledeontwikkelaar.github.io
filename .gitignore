@@ -133,3 +133,6 @@ yarn-error.log*
 coverage
 node_modules/.vite/deps/_metadata.json
 
+# AI
+.claude
+

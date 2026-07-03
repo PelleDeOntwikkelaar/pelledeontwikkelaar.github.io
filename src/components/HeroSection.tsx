@@ -1,59 +1,51 @@
-import { Button } from './ui/button'
-import { ImageWithFallback } from './figma/ImageWithFallback'
-import { Shield, Clock, CheckCircle } from 'lucide-react'
-import imageSource from '../assets/home_image.jpeg'
+import { Link } from 'react-router-dom'
+import { Eyebrow } from './Eyebrow'
+import { useLang } from '@/lib/i18n'
 
 export function HeroSection() {
+  const { t } = useLang()
+
   return (
-    <section className="from-secondary/30 bg-gradient-to-b to-white px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          <div>
-            <h1 className="text-primary mb-6 text-4xl leading-tight lg:text-5xl">
-              Jouw bedrijfsnetwerk, klaar voor de toekomst
-            </h1>
-            <p className="text-muted-foreground mb-8 text-xl">
-              Geen gedoe meer met traag internet of onveilige verbindingen. Met
-              Ubiquiti UniFi-systemen zorg ik voor een netwerk dat niet alleen
-              betaalbaar is, maar ook ijzersterk, schaalbaar en met oog voor
-              detail geïnstalleerd.
-            </p>
+    <section className="relative overflow-hidden">
+      {/* Decorative thin-ring circle + giant watermark P — hidden on mobile */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute top-1/2 right-0 hidden translate-x-1/4 -translate-y-1/2 min-[720px]:block"
+      >
+        <div className="border-line flex size-[460px] items-center justify-center rounded-full border-[1.5px]">
+          <span
+            className="font-display leading-none font-light"
+            style={{ fontSize: 300, color: 'rgba(28,107,71,0.06)' }}
+          >
+            P
+          </span>
+        </div>
+      </div>
 
-            <div className="mb-8 flex flex-col gap-4 sm:flex-row">
-              <Button size="lg" className="px-8 text-lg" asChild>
-                <a href="#contact">Vraag een gratis adviesgesprek aan</a>
-              </Button>
-            </div>
+      <div className="relative mx-auto max-w-[1200px] px-[22px] pt-[76px] pb-[60px] min-[720px]:px-[40px] min-[720px]:pt-[120px] min-[720px]:pb-[96px]">
+        <Eyebrow>{t.positioning}</Eyebrow>
 
-            <div className="flex flex-col gap-6 text-sm sm:flex-row">
-              <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-green-600" />
-                <span>Uitgebreide garantie (tot 5 jaar)</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="h-5 w-5 text-green-600" />
-                <span>Hulp op afstand wanneer je die nodig hebt</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-green-600" />
-                <span>Ubiquiti installateur</span>
-              </div>
-            </div>
-          </div>
+        <h1 className="font-display text-ink mt-5 max-w-[580px] text-[36px] leading-[1.1] font-light tracking-[-0.02em] min-[720px]:text-[52px]">
+          {t.hero.title}
+        </h1>
 
-          <div className="relative">
-            <ImageWithFallback
-              src={imageSource}
-              alt="Professional network installation"
-              className="w-full rounded-lg shadow-xl"
-            />
-            <div className="absolute -bottom-6 -left-6 rounded-lg bg-white p-4 shadow-lg">
-              <div className="flex items-center gap-2">
-                <div className="h-3 w-3 animate-pulse rounded-full bg-green-500"></div>
-                <span className="text-sm">Network Online</span>
-              </div>
-            </div>
-          </div>
+        <p className="text-muted-foreground mt-6 max-w-[560px] font-sans text-[17px] leading-[1.6] min-[720px]:text-[20px]">
+          {t.hero.lead}
+        </p>
+
+        <div className="mt-9 flex flex-wrap gap-3">
+          <Link
+            to="/services"
+            className="bg-forest text-paper hover:bg-forest-deep rounded-[7px] px-7 py-[13px] font-sans text-[15px] font-semibold transition-colors"
+          >
+            {t.hero.exploreServices}
+          </Link>
+          <Link
+            to={{ pathname: '/', hash: '#contact' }}
+            className="border-line text-ink hover:border-forest hover:text-forest rounded-[7px] border px-7 py-[13px] font-sans text-[15px] font-semibold transition-colors"
+          >
+            {t.hero.bookConsult}
+          </Link>
         </div>
       </div>
     </section>

@@ -1,17 +1,24 @@
-import { render } from '@testing-library/react'
-import { describe, it, expect } from 'vitest'
+import { render, screen } from '@testing-library/react'
+import { BrowserRouter } from 'react-router-dom'
+import { describe, it, expect, vi } from 'vitest'
 import App from './App'
 
+// Formspree's useForm reads an env id and would attempt network calls; stub it.
+vi.mock('@formspree/react', () => ({
+  useForm: () => [{ submitting: false, succeeded: false, errors: [] }, vi.fn()],
+  ValidationError: () => null,
+}))
+
 describe('App', () => {
-  it('renders without crashing', () => {
-    render(<App />)
-    // Basic smoke test - just checking if the app renders.
-    // Since we don't know the exact content that will always stay,
-    // checking for something generic or just ensuring render doesn't throw is good.
-    // However, looking at App.tsx, it renders a bunch of sections.
-    // Let's check for "Ubiquiti" which seems central to the content based on file names.
-    // Or just check if the main container exists.
-    const mainContainer = document.querySelector('.min-h-screen')
-    expect(mainContainer).toBeInTheDocument()
+  it('renders the home page without crashing', () => {
+    render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    )
+    // Wordmark is present in the sticky nav on every route.
+    expect(screen.getAllByText('Pelle De Ontwikkelaar').length).toBeGreaterThan(
+      0
+    )
   })
 })
