@@ -1,88 +1,77 @@
-import { Wifi, Phone, Mail, MapPin } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Monogram } from './Monogram'
+import { useLang } from '@/lib/i18n'
 import { CONTACT } from '@/lib/contact'
 
 export function Footer() {
+  const { t } = useLang()
+
   return (
-    <footer className="bg-primary text-primary-foreground px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          <div className="md:col-span-2">
-            <div className="mb-4 flex items-center space-x-2">
-              <Wifi className="h-8 w-8" />
-              <span className="text-xl">Pelle De Ontwikkelaar</span>
-            </div>
-            <p className="text-primary-foreground/80 mb-6 max-w-md">
-              Professionele Ubiquiti UniFi netwerk installaties voor kleine
-              ondernemingen en handelszaken. Enterprise-grade netwerk simpel en
-              betaalbaar.
+    <footer className="bg-ink text-paper-on-ink">
+      <div className="mx-auto max-w-[1200px] px-[22px] pt-[88px] pb-10 min-[720px]:px-[40px]">
+        <div className="grid grid-cols-1 gap-12 min-[720px]:grid-cols-[1.4fr_1fr_1fr]">
+          {/* Brand */}
+          <div>
+            <Link to="/" className="flex items-center gap-3">
+              <Monogram variant="reversed" size={48} />
+              <span className="font-display text-paper text-[18px] font-medium">
+                Pelle De Ontwikkelaar
+              </span>
+            </Link>
+            <p className="font-display text-paper mt-6 max-w-[320px] text-[26px] leading-[1.2] font-light">
+              {t.footer.tagline}
             </p>
-            <div className="space-y-2">
-              <div className="text-primary-foreground/80 flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                <span>{CONTACT.phone}</span>
-              </div>
-              <div className="text-primary-foreground/80 flex items-center gap-2">
-                <Mail className="h-4 w-4" />
-                <span>{CONTACT.email}</span>
-              </div>
-              <div className="text-primary-foreground/80 flex items-center gap-2">
-                <MapPin className="h-4 w-4" />
-                <span>{CONTACT.locationFull}</span>
-              </div>
-            </div>
+            <a
+              href={CONTACT.emailHref}
+              className="text-brass mt-5 inline-block font-sans text-[15px] hover:underline"
+            >
+              {CONTACT.email}
+            </a>
           </div>
 
+          {/* Services */}
           <div>
-            <h3 className="mb-4 text-lg">Services</h3>
-            <ul className="text-primary-foreground/80 space-y-2">
-              <li>Netwerk Installatie</li>
-              <li>WiFi Setup</li>
-              <li>Security Systems</li>
-              <li>Network Support</li>
-              <li>Consultatie</li>
+            <p className="text-ink-muted font-sans text-[11px] font-semibold tracking-[0.2em] uppercase">
+              {t.footer.servicesLabel}
+            </p>
+            <ul className="mt-4 space-y-3">
+              {t.services.map((service) => (
+                <li key={service.key}>
+                  <Link
+                    to={`/services#${service.key}`}
+                    className="text-paper-on-ink hover:text-paper font-sans text-[15px] transition-colors"
+                  >
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* Contact */}
           <div>
-            <h3 className="mb-4 text-lg">Links</h3>
-            <ul className="text-primary-foreground/80 space-y-2">
+            <p className="text-ink-muted font-sans text-[11px] font-semibold tracking-[0.2em] uppercase">
+              {t.footer.contactLabel}
+            </p>
+            <ul className="mt-4 space-y-3 font-sans text-[15px]">
               <li>
                 <a
-                  href="#services"
-                  className="transition-colors hover:text-white"
+                  href={CONTACT.phoneHref}
+                  className="text-paper-on-ink hover:text-paper transition-colors"
                 >
-                  Services
+                  {CONTACT.phone}
                 </a>
               </li>
-              <li>
-                <a href="#about" className="transition-colors hover:text-white">
-                  Over mij
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#why-ubiquiti"
-                  className="transition-colors hover:text-white"
-                >
-                  Waarom Ubiquiti
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="transition-colors hover:text-white"
-                >
-                  Contact
-                </a>
-              </li>
+              <li className="text-paper-on-ink">{t.contact.locationValue}</li>
+              <li className="text-ink-muted">VAT {CONTACT.vat}</li>
             </ul>
           </div>
         </div>
 
-        <div className="border-primary-foreground/20 mt-12 border-t pt-8 text-center">
-          <p className="text-primary-foreground/60">
-            © {new Date().getFullYear()} Pelle De Ontwikkelaar | BE0803.076.163
-          </p>
+        {/* Legal row */}
+        <div className="mt-16 flex flex-col gap-3 border-t border-[rgba(255,255,255,0.12)] pt-8 font-sans text-[13px] min-[720px]:flex-row min-[720px]:items-center min-[720px]:justify-between">
+          <p className="text-ink-muted">{t.footer.rights}</p>
+          <p className="text-ink-muted">{t.footer.installer}</p>
         </div>
       </div>
     </footer>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="nl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,17 +9,42 @@
       href="/src/assets/PelleDeOntwikkelaar_favicon.png"
     />
 
-    <!-- SEO Meta Tags: Geoptimaliseerd voor Unifi installateur in Antwerpen -->
+    <!--
+      Single-page-apps decoder for GitHub Pages. Restores the original path
+      that 404.html stashed in the query string, so deep links like /services
+      survive a direct visit or refresh. Must run before React Router mounts.
+      Technique: https://github.com/rafgraph/spa-github-pages
+    -->
+    <script type="text/javascript">
+      ;(function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&')
+            })
+            .join('?')
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          )
+        }
+      })(window.location)
+    </script>
+
+    <!-- SEO: EN-first positioning, local UniFi/Antwerp keywords retained -->
     <title>
-      Unifi & Ubiquiti Netwerk Installateur Antwerpen | Pelle De Ontwikkelaar
+      Pelle De Ontwikkelaar — Advisory · Software · UniFi Networks in Antwerp
     </title>
     <meta
       name="description"
-      content="Professionele Unifi en Ubiquiti netwerkinstallaties in regio Antwerpen. Gespecialiseerd in stabiele wifi-oplossingen voor KMO's, winkels en horeca."
+      content="Calm, considered IT for founders: startup advisory, software consulting, and authorised UniFi / Ubiquiti network installation in Antwerp (80 km radius)."
     />
     <meta
       name="keywords"
-      content="Unifi installateur, Ubiquiti specialist, netwerkinstallatie Antwerpen, wifi KMO, wifi horeca, wifi winkel, Pelle De Ontwikkelaar"
+      content="startup advisory, fractional CTO, software consulting, UniFi installer, Ubiquiti specialist, netwerkinstallatie Antwerpen, Unifi installateur, wifi KMO, Pelle De Ontwikkelaar"
     />
     <link rel="canonical" href="https://info.pelledeontwikkelaar.be/" />
 
@@ -28,11 +53,11 @@
     <meta property="og:url" content="https://info.pelledeontwikkelaar.be/" />
     <meta
       property="og:title"
-      content="Unifi & Ubiquiti Netwerk Installateur Antwerpen | Pelle De Ontwikkelaar"
+      content="Pelle De Ontwikkelaar — Advisory · Software · UniFi Networks"
     />
     <meta
       property="og:description"
-      content="Professionele Unifi en Ubiquiti netwerkinstallaties in regio Antwerpen. Gespecialiseerd in stabiele wifi-oplossingen voor KMO's, winkels en horeca."
+      content="Calm, considered IT for founders: startup advisory, software consulting, and authorised UniFi / Ubiquiti network installation in Antwerp."
     />
     <meta
       property="og:image"
@@ -47,11 +72,11 @@
     />
     <meta
       property="twitter:title"
-      content="Unifi & Ubiquiti Netwerk Installateur Antwerpen | Pelle De Ontwikkelaar"
+      content="Pelle De Ontwikkelaar — Advisory · Software · UniFi Networks"
     />
     <meta
       property="twitter:description"
-      content="Professionele Unifi en Ubiquiti netwerkinstallaties in regio Antwerpen. Gespecialiseerd in stabiele wifi-oplossingen voor KMO's, winkels en horeca."
+      content="Calm, considered IT for founders: startup advisory, software consulting, and authorised UniFi / Ubiquiti network installation in Antwerp."
     />
     <meta
       property="twitter:image"
@@ -66,7 +91,10 @@
         "name": "Pelle De Ontwikkelaar",
         "image": "https://info.pelledeontwikkelaar.be/og-image.jpeg",
         "url": "https://info.pelledeontwikkelaar.be/",
-        "telephone": "",
+        "telephone": "+32498655565",
+        "email": "info@pelledeontwikkelaar.be",
+        "vatID": "BE 0803.076.163",
+        "founder": { "@type": "Person", "name": "Pelle Reyniers" },
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Antwerpen",
@@ -77,7 +105,40 @@
           "latitude": 51.2194,
           "longitude": 4.4025
         },
-        "description": "Professionele Ubiquiti Unifi netwerkinstallaties en wifi-optimalisatie voor bedrijven en particulieren in Antwerpen.",
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 51.2194,
+            "longitude": 4.4025
+          },
+          "geoRadius": "80000"
+        },
+        "knowsLanguage": ["en", "nl"],
+        "description": "Startup advisory, software consulting, and authorised Ubiquiti UniFi network installation for founders and small teams in Antwerp and surroundings.",
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "IT advisory & architecture"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Software development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "UniFi / Ubiquiti network installation"
+            }
+          }
+        ],
         "priceRange": "$$"
       }
     </script>

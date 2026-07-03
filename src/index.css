@@ -1,13 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Libre+Franklin:wght@300;400;500;600;700&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  /* Brand radii (Atelier scale: sm 7 · md 11 · lg 14) */
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+
+  /* Brand fonts — font-display = serif voice, font-sans = body/UI */
+  --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Libre Franklin', Arial, Helvetica, sans-serif;
+
+  /* Brand colours (Atelier palette) as first-class utilities */
+  --color-ink: #16241c;
+  --color-forest: #1c6b47;
+  --color-forest-deep: #0f4a30;
+  --color-paper: #f6f4ee;
+  --color-paper-card: #fbfaf6;
+  --color-paper-shell: #edeae1;
+  --color-brass: #c9a24b;
+  --color-muted-ink: #6e776f;
+  --color-line: #e2ded4;
+  --color-ink-muted: #8a978d;
+  --color-paper-on-ink: #cdd6cf;
+
+  /* Brand elevation — low, warm shadows */
+  --shadow-card: 0 14px 40px -20px rgba(20, 33, 28, 0.3);
+  --shadow-lift: 0 22px 50px -22px rgba(20, 33, 28, 0.4);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -42,25 +66,26 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --radius: 0.875rem;
+  /* Atelier palette — paper & ink carry the system, forest is the accent */
+  --background: #f6f4ee; /* paper */
+  --foreground: #16241c; /* ink */
+  --card: #fbfaf6; /* card on paper */
+  --card-foreground: #16241c;
+  --popover: #fbfaf6;
+  --popover-foreground: #16241c;
+  --primary: #1c6b47; /* forest (hover/pressed → #0F4A30) */
+  --primary-foreground: #f6f4ee;
+  --secondary: #edeae1; /* paper-shell */
+  --secondary-foreground: #16241c;
+  --muted: #edeae1;
+  --muted-foreground: #6e776f;
+  --accent: #edeae1;
+  --accent-foreground: #16241c;
+  --destructive: #b23a2e; /* form errors only */
+  --border: #e2ded4; /* hairline */
+  --input: #e2ded4;
+  --ring: #1c6b47;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
